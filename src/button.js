@@ -1,6 +1,7 @@
 import { convertNumberToRomanNumber } from "./numberInRomanNumber.js";
 import { convertNumberInBinaryNumber } from "./numberInBinaryNumber.js";
 import { convertNumberInOctalNumber } from "./numberInOctalNumber.js";
+import { convertNumberInHexaNumber } from "./numberInHexadeNumber.js";
 
 const dataNumber = document.querySelector("#input__data");
 const btn = document.querySelector(".btn");
@@ -13,6 +14,7 @@ document.addEventListener("keydown", () => {
       convertNumberToRomanNumber(dataNumber);
       convertNumberInBinaryNumber(dataNumber);
       convertNumberInOctalNumber(dataNumber);
+      convertNumberInHexaNumber(dataNumber);
     }
     else {
       alert("Você não digitou nenhum número.");
@@ -27,6 +29,7 @@ btn.addEventListener("click", () => {
     convertNumberToRomanNumber(dataNumber);
     convertNumberInBinaryNumber(dataNumber);
     convertNumberInOctalNumber(dataNumber);
+    convertNumberInHexaNumber(dataNumber);
   } else {
     alert("Você não digitou nenhum número.");
   }
