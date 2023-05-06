@@ -6,51 +6,70 @@
 }
 
 .header {
-  background-color: #053D38;
-  color: #F26800;
+  background-color: #304D63;
+  border-bottom: 1px solid #101a22;
+  color: #f2d096;
   text-align: center;
+  text-shadow: 2px 2px #857775;
+  height: 10vh;
+  padding: 10px;
+}
+
+.container {
+  background-color: rgb(207, 226, 233);
+  height: calc(100vh - 10vh - 4vh);
   padding: 20px;
 }
 
-.input__data {
-  background-color: rgb(243, 242, 242);
-  border-radius: 10px;
-  border: none;
-  border-bottom: 2px solid rgb(61, 61, 61);
-  box-shadow: 0 0 0 0;
-  outline: 0;
-  display: block;
-  font-size: large;
-  margin: 20px auto;
-  padding: 10px;
-  text-align: center;
-  width: 90vw;
+hr {
+  margin-bottom: 10px;
 }
 
-.btn {
-  border-radius: 10px;
+.generic__class {
+  border-radius: 15px;
+  border: 1px solid black;
   display: block;
   font-size: large;
-  margin: 20px auto;
-  padding: 5px;
-  width: 90vw;
+  margin-bottom: 15px;
+  padding: 3px;
+  text-align: center;
+  width: 95vw;
+}
+
+.generic__label {
+  margin-left:10px;
 }
 
 .btn:hover {
-  background-color: gray;
+  background-color: rgba(211, 211, 211);
 }
 
-.result {
-  background-color: rgb(243, 242, 242);
+.result__octalNumber,
+.result__hexadecimalNumber,
+.result__binaryNumber,
+.result__romanNumber{
+  background-color: white;
   color: #857775;
-  border-radius: 10px;
-  border: none;
-  display: block;
-  font-size: large;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 40px;
-  margin: auto;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.781);
+  color: white;
   text-align: center;
-  padding: 10px;
-  width: 90vw;
+}
+
+footer span {
+  font-weight: bolder;
+}
+
+@media (max-width: 389px) {
+  .header{
+    height: 20vh;
+    padding: 20px;
+  }
+
+  .container{
+    height: calc(100vh - 20vh);
+  }
+  
 }

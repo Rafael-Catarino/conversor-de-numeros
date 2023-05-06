@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
   <title>Conversor de Números Romanos</title>
 </head>
+
 <body>
+
   <header class="header">
     <h1 class="title">Conversor de Números</h1>
   </header>
+
   <main class="container">
-    <section>
-      <input class="input__data input__data__number" placeholder="Informe um número de 1 á 3999" type="number">
-      <button class="btn">Converter</button>
-      <input class="input__data input__data__romanNumber" placeholder="Informe um número Romano" type="text">
-    </section>
+    <div>
+
+      <label class="generic__label" for="input__data">Insira um Número: </label>
+
+      <input id="input__data" class="generic__class" placeholder="Número de 1 á 3999" type="number" />
+
+      <button class="generic__class btn">Converter</button>
+    </div>
+
+    <hr>
+
+    <div>
+      <label class="generic__label" for="">Número Romano:</label>
+      <p class="generic__class result__romanNumber">Número Romano</p>
+
+
+      <label class="generic__label" for="">Número binário: </label>
+      <p class="generic__class result__binaryNumber">Número Binário</p>
+
+
+      <label class="generic__label" for="">Número Octal: </label>
+      <p class="generic__class result__octalNumber">Número Octal</p>
+
+
+      <label class="generic__label" for="">Número Hexadecimal: </label>
+      <p class="generic__class result__hexadecimalNumber">Número Hexadecimal</p>
+
+    </div>
+
   </main>
+
+  <footer>
+    <p>Desenvolvido por: <span>Rafael dos Santos Catarino</span></p>
+  </footer>
+
 </body>
+
 <script type="module" src="src/button.js"></script>
 <script type="module" src="src/numberInRomanNumber.js"></script>
-<script type="module" src="src/romanNumberInNumber.js"></script>
+<script type="module" src="src/numberInBinaryNumber.js"></script>
+<script type="module" src="src/numberInOctalNumber.js"></script>
+
 </html>
