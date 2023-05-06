@@ -23,35 +23,34 @@ const getTheFourthRomanNumber = (number) => {
 };
 
 const ridingTheRomanNumeral = (romanNumber) => {
-  if(romanNumber != ""){
-    const resultRomanNumber = romanNumber.reverse().join("");
+  const resultRomanNumber = romanNumber.reverse().join("");
   dataRomanNumber.innerText = resultRomanNumber;
-  } else {
-    dataRomanNumber.innerText = "0";
-  }
-  
 };
 
 export const convertNumberToRomanNumber = (dataNumber) => {
-  const number = dataNumber.value.split("").reverse();
-  const romanNumber = [];
-  for (let i = 0; i < number.length; i = i + 1) {
-    switch (i) {
-      case 0:
-        romanNumber.push(getTheFirstRomanNumber(number[i]));
-        break;
-      case 1:
-        romanNumber.push(getTheSecondRomanNumber(number[i]));
-        break;
-      case 2:
-        romanNumber.push(getTheThirdRomanNumber(number[i]));
-        break;
-      case 3:
-        romanNumber.push(getTheFourthRomanNumber(number[i]));
-        break;
-      default:
-        alert("Você digitou um número maior que o permitido");
+  if (dataNumber.value == 0) {
+    dataRomanNumber.innerText = "0";
+  } else {
+    const number = dataNumber.value.split("").reverse();
+    const romanNumber = [];
+    for (let i = 0; i < number.length; i = i + 1) {
+      switch (i) {
+        case 0:
+          romanNumber.push(getTheFirstRomanNumber(number[i]));
+          break;
+        case 1:
+          romanNumber.push(getTheSecondRomanNumber(number[i]));
+          break;
+        case 2:
+          romanNumber.push(getTheThirdRomanNumber(number[i]));
+          break;
+        case 3:
+          romanNumber.push(getTheFourthRomanNumber(number[i]));
+          break;
+        default:
+          alert("Você digitou um número maior que o permitido");
+      }
     }
+    ridingTheRomanNumeral(romanNumber);
   }
-  ridingTheRomanNumeral(romanNumber);
 };
