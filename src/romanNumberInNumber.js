@@ -1,22 +1,22 @@
 //convertendo número romano em número decimal.
 
-const dataNumber = document.querySelector('.input__data');
+const dataNumber = document.querySelector(".input__data__number");
 
 const assemblingDecimalNumber = (arr) => {
   let number = 0;
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     let n = arr[i];
-    let n1 = arr[i-1];
-    if(i === 0) {
-      number = n
-    } else if(n === n1 || n1 - n > 0) {
+    let n1 = arr[i - 1];
+    if (i === 0) {
+      number = n;
+    } else if (n === n1 || n1 - n > 0) {
       number = number + n;
     } else {
       number = number + (n - n1 * 2);
     }
   }
-  dataNumber.value = number;
-}
+  dataNumber.innerHTML = number;
+};
 
 export const convertRomanNumberToNumber = (dataRomanNumber) => {
   const romanNumber = dataRomanNumber.value.toUpperCase();
@@ -24,7 +24,7 @@ export const convertRomanNumberToNumber = (dataRomanNumber) => {
   for (let i = 0; i < romanNumber.length; i++) {
     switch (romanNumber[i]) {
       case "I":
-          arrNumber.push(1);
+        arrNumber.push(1);
         break;
       case "V":
         arrNumber.push(5);
@@ -45,8 +45,8 @@ export const convertRomanNumberToNumber = (dataRomanNumber) => {
         arrNumber.push(1000);
         break;
       default:
-        alert('Você digitou um numero invalido');
+        alert("Você digitou um numero invalido");
     }
   }
   assemblingDecimalNumber(arrNumber);
-}
+};
