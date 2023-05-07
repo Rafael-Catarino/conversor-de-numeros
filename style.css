@@ -18,7 +18,7 @@
 .container {
   background-color: rgb(207, 226, 233);
   height: calc(100vh - 10vh - 4vh);
-  padding: 20px;
+  padding-top: 15px;
 }
 
 hr {
@@ -30,6 +30,7 @@ hr {
   border: 1px solid black;
   display: block;
   font-size: large;
+  margin: auto;
   margin-bottom: 15px;
   padding: 3px;
   text-align: center;
@@ -37,7 +38,7 @@ hr {
 }
 
 .generic__label {
-  margin-left:10px;
+  margin-left: 40px;
 }
 
 .btn:hover {
@@ -69,7 +70,12 @@ footer span {
   }
 
   .container{
-    height: calc(100vh - 20vh);
+    height: calc(100vh - 20vh - 8vh);
   }
   
+  p  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
